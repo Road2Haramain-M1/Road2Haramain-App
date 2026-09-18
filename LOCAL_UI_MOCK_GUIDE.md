@@ -41,8 +41,9 @@ the latest run includes unrelated CTOS branding. No existing public asset or sou
 JSON was overwritten.
 
 The typed directory catalogue maps offers only by matching licence number AND
-normalized company name. In local mock mode, A&M Berkat, Andalusia Travel & Tours,
-and C.S Holidays have fictional packages and one synthetic departure per package;
+normalized company name. In local mock mode, Andalusia Travel & Tours has fictional
+Umrah and Umrah Instalment packages, while C.S Holidays has fictional Umrah packages;
+each package has one synthetic departure.
 these are UI fixtures, not actual offers, prices, dates, or availability from the
 named agencies. Other agencies show the empty-package state. Backend failures remain
 retryable errors.

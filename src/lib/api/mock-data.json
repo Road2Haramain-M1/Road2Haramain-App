@@ -33,7 +33,7 @@
     { "id": "baiti-travel", "name": "BAITI TRAVEL AND TOURS SDN. BHD.", "address": "SUITE 266-4-1, 4TH FLOOR, WISMA MUTIARA GENTING, JALAN AYER JERNEH, OFF JALAN GENTING KELANG, SETAPAK, 53200 KUALA LUMPUR, Wilayah Persekutuan Kuala Lumpur", "phone": "", "license_no": "", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "" }
   ],
   "products": [
-    { "id": "mock-instalment-umrah", "provider_id": "am-berkat-travel", "category": "umrah-instalment", "name_en": "Umrah Instalment Package", "name_ms": "Pakej Umrah Ansuran", "description_en": "12 days / 10 nights · Flexible instalments", "description_ms": "12 hari / 10 malam · Ansuran fleksibel", "unit_price": "8999.00", "currency": "MYR" },
+    { "id": "mock-instalment-umrah", "provider_id": "andalusia-travel", "category": "umrah-instalment", "name_en": "Umrah Instalment Package", "name_ms": "Pakej Umrah Ansuran", "description_en": "12 days / 10 nights · Flexible instalments", "description_ms": "12 hari / 10 malam · Ansuran fleksibel", "unit_price": "8999.00", "currency": "MYR" },
     { "id": "mock-hajj-standard", "provider_id": "pjh-rahmah", "category": "hajj", "name_en": "Hajj Economy Package", "name_ms": "Pakej Haji Ekonomi", "description_en": "18 days / 16 nights", "description_ms": "18 hari / 16 malam", "unit_price": "18999.00", "currency": "MYR" },
     { "id": "mock-hajj-premium", "provider_id": "pjh-nusantara", "category": "hajj", "name_en": "Hajj Premium Package", "name_ms": "Pakej Haji Premium", "description_en": "24 days / 22 nights", "description_ms": "24 hari / 22 malam", "unit_price": "26999.00", "currency": "MYR" },
     {
