@@ -1,0 +1,14 @@
+.header { display: flex; align-items: center; gap: 12px; }
+.text { min-width: 0; flex: 1; }
+.logo {
+  position: relative;
+  display: block;
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+  border: 1px solid #e6eee8;
+  border-radius: 16px;
+  background: white;
+  overflow: hidden;
+}
+.logo img { object-fit: contain; padding: 5px; }

@@ -1,0 +1,129 @@
+{
+  "bookings": [
+    { "id": "mock-booking-1", "reference": "R2H-2026-1048", "state": "CONFIRMED", "product_id": "mock-standard-umrah", "departure_id": "mock-standard-oct-2026", "total_amount": "8999.00", "currency": "MYR", "hold_expires_at": "2026-10-01T00:00:00Z", "payment": { "id": "mock-payment-1", "reference": "PAY-1048", "state": "SUCCEEDED", "amount": "500.00", "currency": "MYR" }, "scenario": "success", "created_at": "2026-09-10T00:00:00Z", "demo": true, "package_name": "Standard Umrah Package", "agency_name": "A&M BERKAT TRAVEL & TOURS SDN. BHD.", "booking_fee": "500.00", "start_date": "2026-10-15", "end_date": "2026-10-26" }
+  ],
+  "agencies": [
+    { "id": "pjh-rahmah", "name": "PJH Rahmah Travel & Tours", "address": "Kuala Lumpur, Malaysia", "phone": "03-2000 2027", "license_no": "PJH-1001", "services": "Hajj", "office_type": "Ibu Pejabat", "expiry_date": "31/12/27" },
+    { "id": "pjh-nusantara", "name": "PJH Nusantara Haramain", "address": "Selangor, Malaysia", "phone": "03-2000 2028", "license_no": "PJH-1002", "services": "Hajj", "office_type": "Ibu Pejabat", "expiry_date": "31/12/27" },
+    { "id": "am-berkat-travel", "name": "A&M BERKAT TRAVEL & TOURS SDN. BHD.", "address": "20-2, JALAN JELATEK 2, PUSAT PERNIAGAAN JELATEK, 50200, Wilayah Persekutuan Kuala Lumpur", "phone": "03-2787 2600", "license_no": "6467", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "03/11/26" },
+    { "id": "abeel-travel", "name": "ABEEL TRAVEL & SERVICES SDN. BHD.", "address": "41-2, JALAN WANGSA SETIA 1, WANGSA MELAWATI, 53300 KUALA LUMPUR, Wilayah Persekutuan Kuala Lumpur", "phone": "013-3432 682 / 012-2694 065", "license_no": "10559", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "19/04/27" },
+    { "id": "abk-travel", "name": "ABK TRAVEL SDN BHD", "address": "1-40, Jalan Pandan Prima 2, Dataran Pandan Prima, 55100, Wilayah Persekutuan Kuala Lumpur", "phone": "013-333 0074", "license_no": "8345", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "23/10/26" },
+    { "id": "addeen-travel", "name": "ADDEEN TRAVEL & TOURS SDN. BHD.", "address": "14-1-1, Blok D, Diamond Square, Jalan Semarak Api 3, Off Jalan Gombak, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur", "phone": "03-40219091", "license_no": "2956", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "26/01/27" },
+    { "id": "al-ansar-travel", "name": "AL ANSAR TRAVEL & TOURS (M) SDN. BHD.", "address": "2-3-40, 3RD FLOOR, WISMA RAMPAI, JALAN 34/26, TAMAN SRI RAMPAI 53300 SETAPAK, Wilayah Persekutuan Kuala Lumpur", "phone": "019 - 4756916", "license_no": "10077", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "16/10/26" },
+    { "id": "al-asywaq-travel", "name": "AL ASYWAQ TRAVEL & TOURS SDN. BHD.", "address": "T2A-16-13, 3 TOWERS, 296 JALAN AMPANG, 50450 KUALA LUMPUR, Wilayah Persekutuan Kuala Lumpur", "phone": "010- 984 6184", "license_no": "12072", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "23/01/29" },
+    { "id": "al-fawwaz-travel", "name": "AL FAWWAZ TRAVEL & SERVICES SDN. BHD. (NIBRAS TRAVEL & SERVICES SDN. BHD.)", "address": "14-2F, Jalan AU 1A/4A, Taman Keramat Permai, 54200, Wilayah Persekutuan Kuala Lumpur", "phone": "03-4266 9048/ 012-206 7873", "license_no": "6547", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "14/10/28" },
+    { "id": "al-furqan-travel", "name": "AL FURQAN TRAVEL & TOURS SDN. BHD.", "address": "No. 8-1 & 8-2 Jalan Tasik Utama 7 The Trillium (Lake Fields) 57000 Bukit Jalil, Wilayah Persekutuan Kuala Lumpur", "phone": "03-9054 6054 / 018 - 5919150", "license_no": "7411", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "15/06/31" },
+    { "id": "al-hijjrah-vacation", "name": "AL HIJJRAH VACATION SDN BHD", "address": "R7 M Suite Residency, Ground Floor 283, Jalan Ampang, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur", "phone": "0166613424", "license_no": "4648/1", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Cawangan", "expiry_date": "19/06/28" },
+    { "id": "al-mandili-travel", "name": "AL MANDILI TRAVEL & TOURS (M) SDN. BHD", "address": "20-B, JALAN 2/2D, MEDAN IDAMAN BUSINESS CENTRE, JALAN GOMBAK 53000 KUALA LUMPUR, Wilayah Persekutuan Kuala Lumpur", "phone": "03-4032 1413/013-2129051/019-202 8918", "license_no": "9443", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "15/10/28" },
+    { "id": "al-baz-travels", "name": "AL-BAZ TRAVELS SDN. BHD.", "address": "A-8-4, Megan Phoenix, Jalan 2/142A, KM10, Off Jalan Cheras, 56000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur", "phone": "03-91010408", "license_no": "4457", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "13/12/26" },
+    { "id": "altis-holidays", "name": "ALTIS HOLIDAYS SDN. BHD.", "address": "Block E-03-02, Star Park Point, Taman Danau Kota 53300 Setapak, Wilayah Persekutuan Kuala Lumpur", "phone": "03-4144 2976", "license_no": "5466", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "16/09/28" },
+    { "id": "alwasayet-travels", "name": "ALWASAYET TRAVELS & TOURS SDN. BHD.", "address": "4-1 JALAN 5/65C OFF JALAN PAHANG, 53000 KUALA LUMPUR, Wilayah Persekutuan Kuala Lumpur", "phone": "03-9226 0529", "license_no": "7822", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "20/03/27" },
+    { "id": "an-najwa-travel", "name": "AN-NAJWA TRAVEL & TOURS SDN. BHD.", "address": "A-9-2 Block A, Jalan Excella 3, Off Jalan Ampang Putra, Taman Ampang Hilir, 55100, Wilayah Persekutuan Kuala Lumpur", "phone": "03-4270 3278", "license_no": "2158", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "13/10/28" },
+    { "id": "andalusia-travel", "name": "ANDALUSIA TRAVEL & TOURS SDN BHD", "address": "No.25,27 & 29, Jalan 1/76, Desa Pandan, Kampung Pandan, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur", "phone": "03 - 9283 1588", "license_no": "1050", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "31/12/27" },
+    { "id": "cs-holidays", "name": "C.S HOLIDAYS SDN. BHD.", "address": "No. 374, Tingkat Mezzanine Wisma CS Holidays Jalan Tuanku Abdul Rahman 50100, Wilayah Persekutuan Kuala Lumpur", "phone": "03-26970800", "license_no": "3131", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "31/12/26" },
+    { "id": "anisah-dot-com", "name": "ANISAH DOT COM TRAVEL AND TOURS SDN. BHD.", "address": "26-1, JALAN 1/76D, DESA PANDAN, 55100, Wilayah Persekutuan Kuala Lumpur", "phone": "0392012121", "license_no": "10807", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "21/11/27" },
+    { "id": "annaufa-travel", "name": "ANNAUFAL TRAVEL & TOURS SDN. BHD. (GRACELAND HOLIDAYS SDN. BHD.)", "address": "No.2-2, Jalan Excella, Taman Ampang Hilir, 55100 KUALA LUMPUR, Wilayah Persekutuan Kuala Lumpur", "phone": "019-3087725/03-42709596", "license_no": "6767", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "21/11/27" },
+    { "id": "anwaar-al-himam", "name": "ANWAAR AL HIMAM UMRAH & HOLIDAYS SDN. BHD.", "address": "13A-13A, WANGSA 118, NO. 8, WANGSA DELIMA, WANGSA MAJU, 53300 KUALA LUMPUR, Wilayah Persekutuan Kuala Lumpur", "phone": "03-4131 4161", "license_no": "11957", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "22/04/27" },
+    { "id": "ar-rayyan-hijrah", "name": "AR RAYYAN HIJRAH HARAMAIN TRAVEL & TOURS SDN. BHD.", "address": "G6, GROUND FLOOR, MENARA PERMATA DAMANSARA, NO. 685, JALAN DAMANSARA, 60000, Wilayah Persekutuan Kuala Lumpur", "phone": "019-266 2166", "license_no": "10811", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "05/09/27" },
+    { "id": "ar-reizen-tour", "name": "AR REIZEN TOUR SERVICES SDN. BHD.", "address": "G-1-1, M-AVENUE, JALAN 1/38A SEGAMBUT BAHAGIA, 51200 KUALA LUMPUR, Wilayah Persekutuan Kuala Lumpur", "phone": "03-6241 2828", "license_no": "11956", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "11/09/28" },
+    { "id": "as-siraj-haj-umrah", "name": "AS-SIRAJ HAJ UMRAH TRAVEL & TOURS SDN. BHD.", "address": "No. 2752B (2nd Floor), Jalan Changkat Permata (In front Of Giant), Taman Permata, Ulu Klang 53300, Wilayah Persekutuan Kuala Lumpur", "phone": "03-2272 1309", "license_no": "4547", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "05/03/28" },
+    { "id": "asuma-travel", "name": "ASUMA TRAVEL SDN. BHD.", "address": "152-1-13, KOMPLEKS MALURI, JALAN JEJAKA, TAMAN MALURI, 55100 KUALA LUMPUR, Wilayah Persekutuan Kuala Lumpur", "phone": "019-488 1554", "license_no": "11970", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "25/11/28" },
+    { "id": "azzair-travel", "name": "AZZAIR TRAVEL & TOURS SDN. BHD.", "address": "GB166, Aras 1, Keramat Mall, 54000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur", "phone": "", "license_no": "3770/1", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Cawangan", "expiry_date": "14/03/28" },
+    { "id": "bagan-utama-holidays", "name": "BAGAN UTAMA HOLIDAYS (M) SDN. BHD.", "address": "No. 53-1, Metro Centre, Jalan Tasik Selatan 8 (8/146), Bandar Tasik Selatan, 57000, Wilayah Persekutuan Kuala Lumpur", "phone": "03 - 9054 9445", "license_no": "7275", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "09/02/28" },
+    { "id": "baiti-travel", "name": "BAITI TRAVEL AND TOURS SDN. BHD.", "address": "SUITE 266-4-1, 4TH FLOOR, WISMA MUTIARA GENTING, JALAN AYER JERNEH, OFF JALAN GENTING KELANG, SETAPAK, 53200 KUALA LUMPUR, Wilayah Persekutuan Kuala Lumpur", "phone": "", "license_no": "", "services": "Inbound, Outbound, Ticketing, Umrah atau Ziarah", "office_type": "Ibu Pejabat", "expiry_date": "" }
+  ],
+  "products": [
+    { "id": "mock-instalment-umrah", "provider_id": "am-berkat-travel", "category": "umrah-instalment", "name_en": "Umrah Instalment Package", "name_ms": "Pakej Umrah Ansuran", "description_en": "12 days / 10 nights · Flexible instalments", "description_ms": "12 hari / 10 malam · Ansuran fleksibel", "unit_price": "8999.00", "currency": "MYR" },
+    { "id": "mock-hajj-standard", "provider_id": "pjh-rahmah", "category": "hajj", "name_en": "Hajj Economy Package", "name_ms": "Pakej Haji Ekonomi", "description_en": "18 days / 16 nights", "description_ms": "18 hari / 16 malam", "unit_price": "18999.00", "currency": "MYR" },
+    { "id": "mock-hajj-premium", "provider_id": "pjh-nusantara", "category": "hajj", "name_en": "Hajj Premium Package", "name_ms": "Pakej Haji Premium", "description_en": "24 days / 22 nights", "description_ms": "24 hari / 22 malam", "unit_price": "26999.00", "currency": "MYR" },
+    {
+      "id": "mock-standard-umrah",
+      "provider_id": "am-berkat-travel",
+      "category": "umrah",
+      "name_en": "Standard Umrah Package",
+      "name_ms": "Standard Umrah Package",
+      "description_en": "12 days / 10 nights",
+      "description_ms": "12 hari / 10 malam",
+      "unit_price": "8999.00",
+      "currency": "MYR"
+    },
+    {
+      "id": "mock-premium-umrah",
+      "provider_id": "am-berkat-travel",
+      "category": "umrah",
+      "name_en": "Premium Umrah Package",
+      "name_ms": "Premium Umrah Package",
+      "description_en": "14 days / 12 nights",
+      "description_ms": "14 hari / 12 malam",
+      "unit_price": "12999.00",
+      "currency": "MYR"
+    },
+    {
+      "id": "mock-andalusia-umrah-essential",
+      "provider_id": "andalusia-travel",
+      "category": "umrah",
+      "name_en": "Umrah Essential Journey",
+      "name_ms": "Pakej Umrah Essential",
+      "description_en": "12 days / 10 nights",
+      "description_ms": "12 hari / 10 malam",
+      "unit_price": "9190.00",
+      "currency": "MYR"
+    },
+    {
+      "id": "mock-andalusia-umrah-comfort",
+      "provider_id": "andalusia-travel",
+      "category": "umrah",
+      "name_en": "Umrah Comfort Journey",
+      "name_ms": "Pakej Umrah Comfort",
+      "description_en": "14 days / 12 nights",
+      "description_ms": "14 hari / 12 malam",
+      "unit_price": "11690.00",
+      "currency": "MYR"
+    },
+    {
+      "id": "mock-cs-holidays-umrah-classic",
+      "provider_id": "cs-holidays",
+      "category": "umrah",
+      "name_en": "Umrah Classic Journey",
+      "name_ms": "Pakej Umrah Classic",
+      "description_en": "11 days / 9 nights",
+      "description_ms": "11 hari / 9 malam",
+      "unit_price": "8790.00",
+      "currency": "MYR"
+    },
+    {
+      "id": "mock-cs-holidays-umrah-premier",
+      "provider_id": "cs-holidays",
+      "category": "umrah",
+      "name_en": "Umrah Premier Journey",
+      "name_ms": "Pakej Umrah Premier",
+      "description_en": "13 days / 11 nights",
+      "description_ms": "13 hari / 11 malam",
+      "unit_price": "10990.00",
+      "currency": "MYR"
+    }
+  ],
+  "departures": {
+    "mock-instalment-umrah": [{ "id": "mock-instalment-oct-2026", "product_id": "mock-instalment-umrah", "start_date": "2026-10-15", "end_date": "2026-10-26", "capacity_available": 12 }],
+    "mock-hajj-standard": [{ "id": "mock-hajj-2027", "product_id": "mock-hajj-standard", "start_date": "2027-05-10", "end_date": "2027-05-27", "capacity_available": 20 }],
+    "mock-hajj-premium": [{ "id": "mock-hajj-premium-2027", "product_id": "mock-hajj-premium", "start_date": "2027-05-12", "end_date": "2027-06-04", "capacity_available": 12 }],
+    "mock-standard-umrah": [
+      { "id": "mock-standard-oct-2026", "product_id": "mock-standard-umrah", "start_date": "2026-10-15", "end_date": "2026-10-26", "capacity_available": 12 }
+    ],
+    "mock-premium-umrah": [
+      { "id": "mock-premium-nov-2026", "product_id": "mock-premium-umrah", "start_date": "2026-11-03", "end_date": "2026-11-16", "capacity_available": 8 }
+    ],
+    "mock-andalusia-umrah-essential": [
+      { "id": "mock-andalusia-essential-nov-2026", "product_id": "mock-andalusia-umrah-essential", "start_date": "2026-11-12", "end_date": "2026-11-23", "capacity_available": 16 }
+    ],
+    "mock-andalusia-umrah-comfort": [
+      { "id": "mock-andalusia-comfort-dec-2026", "product_id": "mock-andalusia-umrah-comfort", "start_date": "2026-12-03", "end_date": "2026-12-16", "capacity_available": 10 }
+    ],
+    "mock-cs-holidays-umrah-classic": [
+      { "id": "mock-cs-classic-nov-2026", "product_id": "mock-cs-holidays-umrah-classic", "start_date": "2026-11-18", "end_date": "2026-11-28", "capacity_available": 18 }
+    ],
+    "mock-cs-holidays-umrah-premier": [
+      { "id": "mock-cs-premier-dec-2026", "product_id": "mock-cs-holidays-umrah-premier", "start_date": "2026-12-11", "end_date": "2026-12-23", "capacity_available": 9 }
+    ]
+  }
+}

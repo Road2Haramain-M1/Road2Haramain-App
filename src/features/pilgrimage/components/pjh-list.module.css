@@ -1,0 +1,29 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0 0 8px;
+}
+
+.logo { 
+  width: 100%;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid #eadfbe;
+  border-radius: 16px;
+  background: white;
+}
+
+.logo img { object-fit: contain; padding: 10px; }
+.logo:hover { border-color: #cfae61; }
+.logo:active { background: #fbf3e1; }
+/* Keep long legal names inside the square at 320px; the button retains the full name. */
+.fallback { margin: 8px; color: var(--ink); font-size: 13px; line-height: 1.35; text-align: center; overflow-wrap: anywhere; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }

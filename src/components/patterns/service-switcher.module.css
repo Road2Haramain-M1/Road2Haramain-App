@@ -1,0 +1,20 @@
+/* Local overlay layers inside the existing toolbar: shade 0, petals 1, trigger 2. */
+.root { position: relative; flex-shrink: 0; width: 44px; height: 44px; }
+.trigger { position: relative; z-index: 2; padding: 0; transition: box-shadow var(--motion-press) ease; }
+.trigger[aria-expanded="true"] { box-shadow: 0 0 0 4px var(--primary-soft); }
+.trigger:focus-visible, .petal:focus-visible { outline: 3px solid var(--primary-soft); outline-offset: 4px; }
+.backdrop { position: fixed; inset: 0; z-index: 0; background: rgb(7 40 31 / .64); }
+.petals { position: absolute; inset: 0; z-index: 1; }
+.petal { position: absolute; top: 0; right: 0; width: max-content; display: flex; align-items: center; gap: 10px; color: var(--primary-dark); text-decoration: none; text-align: right; transform: translate(var(--x), var(--y)); transform-origin: right 22px; border-radius: 16px; }
+.icon { display: grid; place-items: center; flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; background: white; box-shadow: 0 4px 16px rgb(7 40 31 / .18); transition: transform 140ms ease, background 140ms ease; }
+.label { padding: 7px 10px; border-radius: 10px; background: white; font-size: 13px; font-weight: 600; line-height: 1.2; white-space: nowrap; box-shadow: 0 3px 12px rgb(7 40 31 / .12); }
+.petal:hover .icon { background: var(--background); transform: scale(1.06); }
+.petal:active .icon { transform: scale(.95); }
+@media (prefers-reduced-motion: no-preference) {
+  .petal { animation: list-enter 200ms var(--motion-ease) both; animation-delay: var(--delay); }
+  @keyframes list-enter {
+    from { opacity: 0; transform: translate(var(--x), calc(var(--y) - 6px)); }
+    to { opacity: 1; transform: translate(var(--x), var(--y)); }
+  }
+}
+@media (prefers-reduced-motion: reduce) { .trigger, .icon { transition: none; } }

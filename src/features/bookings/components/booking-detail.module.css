@@ -1,0 +1,19 @@
+.eyebrow { margin: 0 0 8px; color: var(--gold-deep); font-size: 13px; font-weight: 650; line-height: 1.35; letter-spacing: .01em; }
+.headingRow { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.headingRow h1 { margin: 0; font-size: 25px; font-weight: 650; letter-spacing: -.65px; line-height: 1.25; }
+.agency { margin: 7px 0 20px; color: var(--muted); font-size: 13px; line-height: 1.4; }
+.card, .remark { margin-top: 14px; padding: 16px; border: 1px solid #eadfbe; border-radius: 16px; background: #fffefb; box-shadow: 0 5px 18px rgb(104 77 26 / .06); }
+.card h2, .remark h2 { margin: 0 0 15px; font-size: 17px; font-weight: 650; }
+.card dl { margin: 0; display: grid; gap: 14px; }
+.card dt { color: var(--muted); font-size: 12px; }
+.card dd { margin: 4px 0 0; font-size: 15px; font-weight: 600; }
+.timeline { display: grid; gap: 16px; }
+.update { display: flex; gap: 12px; }
+.dot { flex: 0 0 10px; width: 10px; height: 10px; margin-top: 4px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px var(--gold-soft); }
+.update strong { display: block; font-size: 15px; }
+.update small { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; }
+.update p, .remark p { margin: 6px 0 0; color: var(--muted); font-size: 15px; line-height: 1.45; }
+.actions { display: grid; gap: 10px; margin: 22px 0 4px; }
+.primary, .secondary { display: flex; align-items: center; justify-content: center; min-height: 53px; border-radius: 999px; font-size: 13px; font-weight: 650; text-decoration: none; }
+.primary { background: var(--green); color: #fff; box-shadow: 0 7px 18px rgb(169 130 54 / .22); }
+.secondary { border: 1px solid #dfc583; color: var(--green); background: #fffefb; }

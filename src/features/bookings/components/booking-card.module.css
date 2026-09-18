@@ -1,0 +1,17 @@
+.card { margin-top: 20px; padding: 20px; border: 1px solid #eadfbe; border-radius: 24px; background: #fffefb; color: #172823; box-shadow: 0 6px 22px rgb(104 77 26 / .08); font-family: var(--font-instrument-sans), Arial, sans-serif; }
+.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.reference { font-size: 11px; font-weight: 550; letter-spacing: .04em; color: #67716d; overflow-wrap: anywhere; }
+.title { margin: 18px 0 7px; font-size: 21px; line-height: 1.25; letter-spacing: -.5px; font-weight: 650; overflow-wrap: anywhere; }
+.agency { margin: 0; color: #67716d; font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
+.dates { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 20px 0; padding: 13px 14px; gap: 12px; border-radius: 14px; background: #faf2de; }
+.dates > div + div { border-left: 1px solid #ead9ac; padding-left: 14px; }
+.dates dt, .label { display: block; color: #67716d; font-size: 12px; line-height: 1.4; }
+.dates dd { margin: 5px 0 0; font-size: 14px; line-height: 1.4; font-weight: 600; font-variant-numeric: tabular-nums; }
+.payment { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
+.amount { display: block; color: #816226; margin-top: 4px; font-size: 24px; font-weight: 650; letter-spacing: -.6px; font-variant-numeric: tabular-nums; }
+.paymentStatus { display: flex; flex-direction: column; align-items: flex-end; gap: 7px; }
+.detailsLink { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 44px; margin-top: 18px; padding: 10px 12px; border: 1px solid #dfc583; border-radius: 999px; background: transparent; color: #075f4d; font: inherit; font-size: 13px; font-weight: 600; text-decoration: none; }
+.detailsLink:hover { background: #faf2de; border-color: #cba653; }
+.detailsLink:active { background: #f5e7c8; }
+.detailsLink:focus-visible { outline: 3px solid #a58339; outline-offset: 3px; }
+@media (max-width: 350px) { .card { padding: 16px; } .title { font-size: 19px; } .dates { padding: 12px 10px; gap: 8px; } .dates > div + div { padding-left: 10px; } .dates dd { font-size: 13px; } }
