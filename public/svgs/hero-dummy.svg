@@ -1,0 +1,19 @@
+<svg width="320" height="360" viewBox="0 0 320 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="360" fill="url(#bg)" />
+  <g opacity="0.35">
+    <rect x="218" y="0" width="8" height="360" fill="#D1A23A" />
+    <rect x="0" y="294" width="320" height="8" fill="#D1A23A" />
+  </g>
+  <g>
+    <polygon points="80,130 212,130 264,178 132,178" fill="#171717" />
+    <polygon points="80,130 132,178 132,340 80,292" fill="#111111" />
+    <polygon points="132,178 264,178 264,340 132,340" fill="#0C0C0C" />
+    <rect x="146" y="178" width="14" height="162" fill="#C39A35" opacity="0.95" />
+  </g>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="320" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2C2C2C" />
+      <stop offset="1" stop-color="#111111" />
+    </linearGradient>
+  </defs>
+</svg>

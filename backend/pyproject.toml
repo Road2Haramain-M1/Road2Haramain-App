@@ -1,0 +1,16 @@
+[project]
+name = "r2h-platform-backend"
+version = "0.1.0"
+description = "Road2Haramain modular monolith backend"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.116,<1.0",
+  "uvicorn[standard]>=0.35,<1.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0,<9.0", "httpx>=0.27,<1.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
