@@ -9,8 +9,10 @@ Run `npm install`, copy `.env.example` to `.env.local` if needed, then run
 
 `NEXT_PUBLIC_LOCAL_UI_MOCK=true` explicitly enables the local PJH dummy packages
 in development. Set it to `false` and restart to see the unconnected catalogue's
-empty state. Production never serves these dummy packages, even if the flag is true.
-See `LOCAL_UI_MOCK_GUIDE.md` for the fixture details and simulation limitations.
+empty state. The separately named `NEXT_PUBLIC_DEPLOYED_DEMO_MOCK=true` flag is a
+user-approved Vercel presentation exception: it serves only fictional browser
+fixtures and does not call a backend, payment, booking, or identity integration.
+See `LOCAL_UI_MOCK_GUIDE.md` for fixture details and limitations.
 
 With mock mode disabled, browser API calls use the same-origin `/api/r2h` route
 and are proxied to `R2H_BACKEND_URL` (default `http://localhost:8000/api/v1`).
@@ -30,34 +32,22 @@ against the local development server for directory, adapter, and mock-isolation 
 
 ## Vercel mockup deployment
 
-Deploy the frontend and demo API as two Vercel projects from this one repository.
-They must remain separate projects: the frontend uses a same-origin BFF route and
-keeps the API origin server-only.
+For the shareable mockup, deploy one **Next.js** Vercel project from the repository
+root and set this Production environment variable:
 
-1. Import the repository as an API project, with **Root Directory** set to
-   `backend`. Vercel discovers the FastAPI app through the explicit
-   `app.main:app` entry point in `backend/pyproject.toml`. Do not supply a Uvicorn
-   start command.
-2. Add the variables from `backend/.env.example` to the API project's
-   **Production** environment. Keep `APP_ENV=demo`; this API rejects mock
-   providers in UAT and production by design.
-3. Deploy the API and verify `/health/ready` at its Vercel URL.
-4. Import the same repository as a frontend project, leaving **Root Directory**
-   blank and selecting Next.js. Add this Production variable, replacing the host:
+```text
+NEXT_PUBLIC_DEPLOYED_DEMO_MOCK=true
+```
 
-   ```text
-   R2H_BACKEND_URL=https://your-api.vercel.app/api/v1
-   ```
+Do not set `R2H_BACKEND_URL` for this presentation deployment. The browser uses
+only fictional package data and an in-memory payment/receipt simulation, so no API
+project, personal data, booking, or payment integration is involved. Refreshing the
+page clears simulated bookings. This flag is a presentation-only exception and must
+not be used for UAT or a real customer environment.
 
-5. Deploy the frontend. Do not set `NEXT_PUBLIC_LOCAL_UI_MOCK` in Vercel. Local
-   fixtures are intentionally unavailable in production.
-
-The demo backend currently stores quotes and bookings in process memory. It is
-appropriate for a short supervised walkthrough, but Vercel can restart or scale
-the function, so booking history is not persistent. The online catalogue currently
-contains two synthetic Umrah products; the local Hajj and selected-agency fixtures
-remain deliberately unavailable in production until equivalent backend catalogue
-data is supplied.
+The optional FastAPI demo can still be deployed separately for backend development.
+Use `backend` as its Vercel Root Directory and its `.env.example` values, then point
+the frontend's server-only `R2H_BACKEND_URL` at it with the presentation flag unset.
 
 ## Agency data and collection tools
 

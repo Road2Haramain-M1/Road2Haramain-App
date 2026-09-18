@@ -8,12 +8,13 @@ The existing content sheet scrolls vertically. Logos load lazily from the suppli
 public Tabung Haji asset URLs; failed images display the company name instead.
 Each logo is a keyboard-accessible button opening the existing shared package,
 travel-plan and overview journey, with back navigation returning to that logo.
-In development with `NEXT_PUBLIC_LOCAL_UI_MOCK=true`, all PJHs have three fictional
+In development with `NEXT_PUBLIC_LOCAL_UI_MOCK=true`, or in the explicitly approved
+Vercel presentation build with `NEXT_PUBLIC_DEPLOYED_DEMO_MOCK=true`, all PJHs have three fictional
 offers: Standard (MYR 28,900), Comfort (MYR 35,900), and Premium (MYR 45,900).
 Each has one synthetic May 2027 departure with 20 places. These are UI fixtures,
 not actual offers, prices, dates or availability from the named agencies.
 The typed PJH catalogue adapter makes no HTTP requests. Missing/false mock flags
-and production always return an empty package list, never synthetic offers.
+return an empty package list, never synthetic offers.
 The existing local receipt remains a non-persistent UI simulation, not a verified
 payment or booking. No real booking/payment endpoints are invoked.
 Umrah Instalment retains its existing catalogue journey.
@@ -46,8 +47,9 @@ these are UI fixtures, not actual offers, prices, dates, or availability from th
 named agencies. Other agencies show the empty-package state. Backend failures remain
 retryable errors.
 No booking/payment endpoint or simulation was added. The shared API client's mock
-selection now requires explicit `NEXT_PUBLIC_LOCAL_UI_MOCK=true` in non-production;
-missing/false flags and production use the backend with no fixture fallback.
+selection requires explicit `NEXT_PUBLIC_LOCAL_UI_MOCK=true` in non-production, or
+the user-approved `NEXT_PUBLIC_DEPLOYED_DEMO_MOCK=true` presentation flag. Missing
+or false flags use the backend with no fixture fallback.
 
 ## Journey receipt actions
 
@@ -68,5 +70,8 @@ and `api.agencies()` adapters. No new endpoint or backend bypass is introduced.
 It displays up to four Umrah products in catalogue order, not measured popularity.
 Prices, descriptions and agency names come from the catalogue (the existing JSON
 fixture in mock mode). Real-mode errors are shown, never replaced with fixtures.
+When the deployed presentation flag is enabled, quotes, booking references, payment
+confirmations, and receipt history are generated in browser memory only. Refreshing
+the page clears them; no request is made to a backend or external integration.
 Loading, empty and retryable error states are supported. See all opens the
 existing Umrah journey; the preview cards do not create bookings or payments.

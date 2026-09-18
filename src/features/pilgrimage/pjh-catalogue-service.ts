@@ -1,6 +1,7 @@
 import type { Agency, Product } from "@/lib/api/types";
 import type { PilgrimageCatalogueService } from "./catalogue-service";
 import { pjhDirectory } from "./pjh-directory";
+import { presentationDemoEnabled } from "@/lib/config/presentation-demo";
 
 const agencies: Agency[] = pjhDirectory.agencies.map(agency => ({
   id: agency.id, name: agency.name, address: "", phone: "", license_no: "",
@@ -40,5 +41,5 @@ const unavailablePjhCatalogue: PilgrimageCatalogueService = {
 };
 
 export const pjhCatalogueService: PilgrimageCatalogueService =
-  process.env.NODE_ENV !== "production" && process.env.NEXT_PUBLIC_LOCAL_UI_MOCK === "true"
+  presentationDemoEnabled
     ? mockPjhCatalogue : unavailablePjhCatalogue;

@@ -1,11 +1,12 @@
 import type { Agency, Booking, Departure, Payment, Product, Quote, TravellerInput } from "./types";
 import { mockApi } from "./mock-client";
+import { presentationDemoEnabled } from "@/lib/config/presentation-demo";
 
 // Browser requests use the same-origin BFF by default; direct backend access
 // remains opt-in for local diagnostics through NEXT_PUBLIC_API_URL.
 const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "/api/r2h";
 // Keep local UI data configurable so the typed client can switch to the backend without component changes.
-const USE_MOCK_API = process.env.NODE_ENV !== "production" && process.env.NEXT_PUBLIC_LOCAL_UI_MOCK === "true";
+const USE_MOCK_API = presentationDemoEnabled;
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const response = await fetch(`${API_URL}${path}`, {
@@ -25,10 +26,15 @@ export const api = {
   products: () => USE_MOCK_API ? mockApi.products() : request<Product[]>("/catalogue/products?category=umrah"),
   departures: (productId: string) => USE_MOCK_API ? mockApi.departures(productId) : request<Departure[]>(`/catalogue/products/${productId}/departures`),
   quote: (productId: string, departureId: string, travellerCount: number) =>
-    request<Quote>("/quotes", { method: "POST", body: JSON.stringify({ product_id: productId, departure_id: departureId, traveller_count: travellerCount }) }),
+    USE_MOCK_API
+      ? mockApi.quote(productId, departureId, travellerCount)
+      : request<Quote>("/quotes", { method: "POST", body: JSON.stringify({ product_id: productId, departure_id: departureId, traveller_count: travellerCount }) }),
   booking: (quoteId: string, travellers: TravellerInput[], scenario: string, key: string) =>
-    request<Booking>("/bookings", { method: "POST", headers: { "Idempotency-Key": key }, body: JSON.stringify({ quote_id: quoteId, travellers, scenario }) }),
+    USE_MOCK_API
+      ? mockApi.booking(quoteId, travellers, scenario)
+      : request<Booking>("/bookings", { method: "POST", headers: { "Idempotency-Key": key }, body: JSON.stringify({ quote_id: quoteId, travellers, scenario }) }),
   payment: async (bookingId: string, scenario: string, key: string) => {
+    if (USE_MOCK_API) return mockApi.payment(bookingId);
     const response = await request<Payment | Booking>("/payments", { method: "POST", headers: { "Idempotency-Key": key }, body: JSON.stringify({ booking_id: bookingId, scenario }) });
     if ("payment" in response && response.payment) return response.payment;
     return response as Payment;
