@@ -8,8 +8,8 @@ The existing content sheet scrolls vertically. Logos load lazily from the suppli
 public Tabung Haji asset URLs; failed images display the company name instead.
 Each logo is a keyboard-accessible button opening the existing shared package,
 travel-plan and overview journey, with back navigation returning to that logo.
-In development with `NEXT_PUBLIC_LOCAL_UI_MOCK=true`, or in the explicitly approved
-Vercel presentation build with `NEXT_PUBLIC_DEPLOYED_DEMO_MOCK=true`, all PJHs have three fictional
+With `NEXT_PUBLIC_LOCAL_UI_MOCK=true` during development, or the explicitly
+approved frontend-only Vercel mockup flag `NEXT_PUBLIC_STATIC_MOCKUP=true`, all PJHs have three fictional
 offers: Standard (MYR 28,900), Comfort (MYR 35,900), and Premium (MYR 45,900).
 Each has one synthetic May 2027 departure with 20 places. These are UI fixtures,
 not actual offers, prices, dates or availability from the named agencies.
@@ -46,10 +46,12 @@ and C.S Holidays have fictional packages and one synthetic departure per package
 these are UI fixtures, not actual offers, prices, dates, or availability from the
 named agencies. Other agencies show the empty-package state. Backend failures remain
 retryable errors.
-No booking/payment endpoint or simulation was added. The shared API client's mock
-selection requires explicit `NEXT_PUBLIC_LOCAL_UI_MOCK=true` in non-production, or
-the user-approved `NEXT_PUBLIC_DEPLOYED_DEMO_MOCK=true` presentation flag. Missing
-or false flags use the backend with no fixture fallback.
+The frontend-only mockup uses in-browser simulated quotes, bookings and payments
+solely to reach the existing receipt screen; they are lost on refresh and never call
+an API. Its `NEXT_PUBLIC_STATIC_MOCKUP=true` production exception was approved only
+for publicly sharing this UI mockup. It contains no credentials, customer data, real
+booking capability, provider calls, or payment calls, and must not be used for UAT
+or a real release. Missing/false flags use the backend with no fixture fallback.
 
 ## Journey receipt actions
 
@@ -70,8 +72,5 @@ and `api.agencies()` adapters. No new endpoint or backend bypass is introduced.
 It displays up to four Umrah products in catalogue order, not measured popularity.
 Prices, descriptions and agency names come from the catalogue (the existing JSON
 fixture in mock mode). Real-mode errors are shown, never replaced with fixtures.
-When the deployed presentation flag is enabled, quotes, booking references, payment
-confirmations, and receipt history are generated in browser memory only. Refreshing
-the page clears them; no request is made to a backend or external integration.
 Loading, empty and retryable error states are supported. See all opens the
 existing Umrah journey; the preview cards do not create bookings or payments.

@@ -1,7 +1,7 @@
 import type { Agency, Product } from "@/lib/api/types";
+import { isUiMockEnabled } from "@/lib/api/mock-mode";
 import type { PilgrimageCatalogueService } from "./catalogue-service";
 import { pjhDirectory } from "./pjh-directory";
-import { presentationDemoEnabled } from "@/lib/config/presentation-demo";
 
 const agencies: Agency[] = pjhDirectory.agencies.map(agency => ({
   id: agency.id, name: agency.name, address: "", phone: "", license_no: "",
@@ -41,5 +41,5 @@ const unavailablePjhCatalogue: PilgrimageCatalogueService = {
 };
 
 export const pjhCatalogueService: PilgrimageCatalogueService =
-  presentationDemoEnabled
+  isUiMockEnabled
     ? mockPjhCatalogue : unavailablePjhCatalogue;

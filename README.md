@@ -7,12 +7,12 @@ Next implementation tasks are tracked in [next implementation reminder](docs/nex
 Run `npm install`, copy `.env.example` to `.env.local` if needed, then run
 `npm run dev`. Open http://localhost:3000/hajj.
 
-`NEXT_PUBLIC_LOCAL_UI_MOCK=true` explicitly enables the local PJH dummy packages
-in development. Set it to `false` and restart to see the unconnected catalogue's
-empty state. The separately named `NEXT_PUBLIC_DEPLOYED_DEMO_MOCK=true` flag is a
-user-approved Vercel presentation exception: it serves only fictional browser
-fixtures and does not call a backend, payment, booking, or identity integration.
-See `LOCAL_UI_MOCK_GUIDE.md` for fixture details and limitations.
+`NEXT_PUBLIC_LOCAL_UI_MOCK=true` explicitly enables local fixture packages in
+development. For the user-approved, frontend-only Vercel mockup, set
+`NEXT_PUBLIC_STATIC_MOCKUP=true` in Vercel's Production environment. This is a
+build-time UI-only exception: it makes no backend, provider, payment, or booking
+requests, and must never be used for UAT or a real release. See
+`LOCAL_UI_MOCK_GUIDE.md` for fixture details and simulation limitations.
 
 With mock mode disabled, browser API calls use the same-origin `/api/r2h` route
 and are proxied to `R2H_BACKEND_URL` (default `http://localhost:8000/api/v1`).
@@ -29,25 +29,6 @@ logo-backed MOTAC-derived agency brands. The complete MOTAC source remains inter
 for future verified integration. See `LOCAL_UI_MOCK_GUIDE.md` for catalogue matching
 and empty states. Run `npx playwright test --config playwright.umrah.config.ts`
 against the local development server for directory, adapter, and mock-isolation checks.
-
-## Vercel mockup deployment
-
-For the shareable mockup, deploy one **Next.js** Vercel project from the repository
-root and set this Production environment variable:
-
-```text
-NEXT_PUBLIC_DEPLOYED_DEMO_MOCK=true
-```
-
-Do not set `R2H_BACKEND_URL` for this presentation deployment. The browser uses
-only fictional package data and an in-memory payment/receipt simulation, so no API
-project, personal data, booking, or payment integration is involved. Refreshing the
-page clears simulated bookings. This flag is a presentation-only exception and must
-not be used for UAT or a real customer environment.
-
-The optional FastAPI demo can still be deployed separately for backend development.
-Use `backend` as its Vercel Root Directory and its `.env.example` values, then point
-the frontend's server-only `R2H_BACKEND_URL` at it with the presentation flag unset.
 
 ## Agency data and collection tools
 

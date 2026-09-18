@@ -161,7 +161,7 @@ export function PilgrimageJourney({ onBack, service = "umrah", catalogue = api, 
     finally { if (version === requestVersion.current) setBusy(false); }
   }
 
-  /** Completes the configured demo or server booking flow after confirmation. */
+  /** Creates the server quote, booking hold, and simulated payment in order. */
   async function confirmUmrahPayment() {
     if (!termsAccepted || !product || !departure || transactionBusy) return;
     setTransactionBusy(true); setError("");
