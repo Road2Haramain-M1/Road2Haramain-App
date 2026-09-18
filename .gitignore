@@ -25,6 +25,9 @@
 /tools/agency-data/workspace/
 /tools/agency-data/__pycache__/
 /agency_info/scripts/__pycache__/
+__pycache__/
+*.py[cod]
+.pytest_cache/
 
 # OS and editor files.
 .DS_Store

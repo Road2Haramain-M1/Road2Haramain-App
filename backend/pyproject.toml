@@ -11,6 +11,11 @@ dependencies = [
 [project.optional-dependencies]
 test = ["pytest>=8.0,<9.0", "httpx>=0.27,<1.0"]
 
+[tool.vercel]
+# The API project uses backend/ as its Vercel Root Directory.  Declaring this
+# avoids relying on framework file-discovery rules for app/main.py.
+entrypoint = "app.main:app"
+
 [tool.pytest.ini_options]
 pythonpath = ["."]
 testpaths = ["tests"]

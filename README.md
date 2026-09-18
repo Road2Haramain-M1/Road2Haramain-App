@@ -28,6 +28,37 @@ for future verified integration. See `LOCAL_UI_MOCK_GUIDE.md` for catalogue matc
 and empty states. Run `npx playwright test --config playwright.umrah.config.ts`
 against the local development server for directory, adapter, and mock-isolation checks.
 
+## Vercel mockup deployment
+
+Deploy the frontend and demo API as two Vercel projects from this one repository.
+They must remain separate projects: the frontend uses a same-origin BFF route and
+keeps the API origin server-only.
+
+1. Import the repository as an API project, with **Root Directory** set to
+   `backend`. Vercel discovers the FastAPI app through the explicit
+   `app.main:app` entry point in `backend/pyproject.toml`. Do not supply a Uvicorn
+   start command.
+2. Add the variables from `backend/.env.example` to the API project's
+   **Production** environment. Keep `APP_ENV=demo`; this API rejects mock
+   providers in UAT and production by design.
+3. Deploy the API and verify `/health/ready` at its Vercel URL.
+4. Import the same repository as a frontend project, leaving **Root Directory**
+   blank and selecting Next.js. Add this Production variable, replacing the host:
+
+   ```text
+   R2H_BACKEND_URL=https://your-api.vercel.app/api/v1
+   ```
+
+5. Deploy the frontend. Do not set `NEXT_PUBLIC_LOCAL_UI_MOCK` in Vercel. Local
+   fixtures are intentionally unavailable in production.
+
+The demo backend currently stores quotes and bookings in process memory. It is
+appropriate for a short supervised walkthrough, but Vercel can restart or scale
+the function, so booking history is not persistent. The online catalogue currently
+contains two synthetic Umrah products; the local Hajj and selected-agency fixtures
+remain deliberately unavailable in production until equivalent backend catalogue
+data is supplied.
+
 ## Agency data and collection tools
 
 ```text
